@@ -1,0 +1,49 @@
+<!-- <ion-modal-view> -->
+  <ion-content>
+    <div class="call-info card text-center">
+      <div class="item item-divider">
+
+        {{ showCallData().customer_phone_number }}
+
+      </div>
+      <div class="item item-text-wrap">
+        <div class='row'>
+          <div class='col text-left'>
+            Start time:<br />
+            Duration: <br />
+            Answered: <br />
+            Direction: <br />
+            ID: <br />
+            Location: <br />
+          </div>
+          <div class="col text-left">
+            {{ formatTime(call.start_time)[1] }}, {{ formatTime(call.start_time)[0] }} <br />
+            {{ call.duration }} seconds <br />
+            {{ call.answered ? 'Picked up' : 'Ignored' }} <br />
+            {{ call.direction }} <br />
+            {{ call.id }} <br />
+            {{ call.customer_city }}, {{ call.customer_state }}, {{ call.customer_country }}
+
+          </div>
+
+
+        </div>
+          Listen to recording:
+          <iframe ng-src='{{ trustURL(call.recording_player) }}' height='300' width='350'><iframe> 
+      </div>
+    </div>
+  </ion-content>
+<!--  </ion-modal-view> -->
+    <!-- <div class="card text-center">
+      <div class="item item-divider">
+        {{ call.customer_phone_number }}
+      </div>
+      <div class="item item-text-wrap">
+        {{ formatTime(call.start_time)[0] }}<br/>
+        {{ formatTime(call.start_time)[1] }}<br/>
+        {{ call.duration }}
+      </div>
+      <div class="item item-divider">
+        {{ call.customer_city }}, {{ call.customer_state }}
+      </div>
+    </div> --> 

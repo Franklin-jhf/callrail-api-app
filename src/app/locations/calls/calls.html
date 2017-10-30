@@ -1,0 +1,38 @@
+<ion-view view-title="Calls">
+    <ion-content>
+      <ion-list>
+        <div class="col">
+          <div class="card text-center" ng-repeat="call in calls track by $index" on-tap="openCall(call, $index)">
+            <div class="item item-divider">
+              {{ data.customer_phone_number }}
+            </div>
+            <div class="item item-text-wrap">
+              {{ formatTime(call.start_time)[0] }}<br/>
+              {{ formatTime(call.start_time)[1] }}<br/>
+              {{ call.duration }}
+
+            </div>
+            <div class="item item-divider">
+              {{ call.customer_city }}, {{ call.customer_state }}
+            </div>
+          </div>
+          <!-- <ion-item class="row button button-icon light animated bounceInUp" >
+            <h1></h1><br/>
+            <div class='call'>
+              <div class='call-headers'>
+                <h3>Call location: </h3><br/>
+                <h4>Call time:</h4><br/>
+                <h4>Call length:</h4><br/>
+              </div>
+              <div class='call-info'>
+                <h3></h3><br/>
+                <h4>{{ call.start_time }}</h4><br/>
+                <h4>{{ call.duration }}</h4><br/>
+              </div>
+          </div>
+
+          </ion-item> -->
+        </div>
+      </ion-list>
+    </ion-content>
+</ion-view>
