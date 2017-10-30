@@ -4,7 +4,7 @@
         <div class="col">
           <div class="card text-center" ng-repeat="call in calls track by $index" on-tap="openCall(call, $index)">
             <div class="item item-divider">
-              {{ data.customer_phone_number }}
+              {{ call.customer_phone_number }}
             </div>
             <div class="item item-text-wrap">
               {{ formatTime(call.start_time)[0] }}<br/>
